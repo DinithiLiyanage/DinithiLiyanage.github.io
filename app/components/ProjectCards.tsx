@@ -41,35 +41,38 @@ export default function ProjectCards() {
           key={idx}
           className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:shadow-xl transition-shadow"
         >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-48 w-full object-cover" // Changed from object-cover to object-contain
-          />
+          <div className="relative h-48 w-full">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="h-48 w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+          </div>
           <div className="p-4">
             <div className="flex justify-between items-start">
               <h3 className="text-xl font-semibold text-white">
-                {project.title}
+          {project.title}
               </h3>
               {project.repo && (
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#66FCF1] hover:underline ml-2"
-                >
-                  🔗
-                </a>
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#66FCF1] hover:underline ml-2"
+          >
+            🔗
+          </a>
               )}
             </div>
             <div className="flex flex-wrap gap-2 mt-2">
               {project.tech.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-[#66FCF1]/10 text-[#66FCF1] px-2 py-1 rounded-full"
-                >
-                  {tech}
-                </span>
+          <span
+            key={i}
+            className="text-xs bg-[#66FCF1]/10 text-[#66FCF1] px-2 py-1 rounded-full"
+          >
+            {tech}
+          </span>
               ))}
             </div>
             <p className="text-gray-300 mt-3 text-sm leading-relaxed">
