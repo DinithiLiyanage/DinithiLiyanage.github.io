@@ -27,7 +27,7 @@ export default function Home() {
 
           <div className="flex gap-4 pt-4">
             <a
-              href="dinithi.adithya@gmail.com"
+              href="mailto:madinithi.adithya@gmail.com"
               className="bg-gray-600 p-3 rounded shadow hover:bg-gray-400"
             >
               <FaEnvelope />
